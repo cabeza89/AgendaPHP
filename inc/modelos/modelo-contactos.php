@@ -34,7 +34,7 @@ if ($_POST['accion'] == 'crear') {
     echo json_encode($respuesta);
 }
 
-if ($_GET['accion'] == 'borrar') {
+if ($_POST['accion'] == 'borrar') {
     require_once('../funciones/conexion.php');
     $id = filter_var($_GET['id'], FILTER_SANITIZE_NUMBER_INT);
 
