@@ -1,0 +1,221 @@
+:root{
+  --primario: #1CBACC;
+  --primarioOscuro: #138b99;
+  --secundario: #2d966f;
+  --fuentePrincipal: 'Solway', serif;
+  --fuenteSecundaria: 'Josefin Sans', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+.bg-secundario{
+  background-color: var(--secundario);
+}
+div.bg-blanco{
+  background-color: #ffffff;
+}
+.sombra{
+  -webkit-box-shadow: 0px 6px 9px 2px rgba(0,0,0,0.85);
+  -moz-box-shadow: 0px 6px 9px 2px rgba(0,0,0,0.85);
+  box-shadow: 0px 6px 9px 2px rgba(0,0,0,0.85);
+  border-radius: 10px;
+}
+.barra{
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  align-items: center;
+}
+/* botones */
+.btn{
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.btn:hover{
+  cursor: pointer;
+}
+.btn-editar{
+  color: var(--primario);
+}
+.btn-borrar{
+  color: var(--secundario);
+}
+.volver{
+  background-color: var(--secundario);
+  border-radius: 5px;
+  text-align: center;
+  color: #000000;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: .5rem;
+}
+
+body{
+  background-color: var(--primario);
+  font-family: var(--fuentePrincipal);
+}
+.contenedor{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.contenedor-barra{
+  background-color: var(--primarioOscuro);
+}
+h1, h2{
+  font-family: var(--fuentePrincipal);
+  text-align: center;
+  margin: 0;
+}
+h1{
+  padding: 15px;
+  color: #ffffff;
+}
+h2{
+  font-size: 2rem;
+  color: var(--primario);
+}
+
+
+/***************FORMULARIO*********************/
+form{
+  padding: 3rem;
+  margin-top: 2rem;
+}
+form legend{
+  font-family: var(--fuenteSecundaria);
+  font-size: 2rem;
+  text-align: center;
+  display: block;
+}
+legend span{
+  font-size: 1.5rem;
+  margin-top: .9rem;
+  margin-bottom: 2rem;
+  clear: both;
+  display: block;
+}
+@media (min-width: 768px){
+  div.campos{
+    display: flex;
+    justify-content: space-between;
+  }
+  .campo{
+    flex: 0 0 calc(33.3% - 1rem);
+  }
+}
+.campo{
+  padding: .5rem 0;
+}
+.campo label{
+  font-size: 1.2rem;
+}
+.campo input[type="text"],
+.campo input[type="tel"]{
+  width: 100%;
+  border: none;
+  padding: .5rem;
+  height: 2.5rem;
+  margin-top: .5rem;
+  font-size: 1.2rem;
+}
+div.enviar{
+  display: flex;
+  justify-content: flex-end;
+}
+.campo input[type="submit"]{
+  background-color: var(--primario);
+  border: none;
+  color: #ffffff;
+  padding: 1rem 4rem;
+  text-transform: uppercase;
+  transition: background-color .5s ease-in-out;
+  flex: 1;
+}
+.campo input[type="submit"]:hover{
+  cursor: pointer;
+  background-color: var(--primarioOscuro);
+  
+}
+@media (min-width: 768px){
+  .campo input[type="submit"]{
+    flex: 0 0 auto;
+  }
+}
+
+/*****************************CONTACTOS*******************/
+.contactos{
+  margin-top: 3rem;
+  padding: 2rem;
+}
+.contenedor-contactos{
+  max-width: 900px;
+  margin: 4rem auto 0 auto;
+}
+.buscador{
+  width: 100%;
+  height: 4rem;
+  padding: 1rem;
+  border: 1px solid #e1e1e1;
+  margin: 2rem 0;
+}
+.contenedor-tabla{
+  overflow: scroll;
+}
+.total-contactos{
+  font-family: var(--fuenteSecundaria);
+  margin: 2rem 0;
+  text-align: center;
+  color: var(--primario);
+  font-size: 2rem;
+}
+.total-contactos span{
+  font-size: 3rem;
+  font-weight: 900;
+}
+.listado-contactos{
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: collapse;
+}
+.listado-contactos thead{
+  background-color: var(--primario);
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.listado-contactos thead th{
+  padding: 1rem 0;
+}
+.listado-contactos tbody td{
+  padding: .5rem;
+}
+.listado-contactos tbody td:nth-child(4){
+  text-align: center;
+}
+.listado-contactos button{
+  background-color: transparent!important;
+  border: none;
+}
+/******** Notificaciones ************/
+
+.notificacion{
+  position: fixed;
+  top: .5rem;
+  right: 1rem;
+  padding: 1rem 3rem;
+  opacity: 0;
+}
+.visible{
+  opacity: 1;
+}
+/*colores de las notificaciones*/
+.correcto{
+  background-color: rgb(179, 241, 177);
+  color: green;
+}
+.error{
+ background-color: rgb(238, 148, 166);
+ background-color: rgb(163, 0, 33);
+}
