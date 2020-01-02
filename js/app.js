@@ -121,7 +121,7 @@ function eliminarContacto(e){
             //llamado a AJAX crear el objeto
             const xhr = new XMLHttpRequest();
             //abrir la conexion
-            xhr.open('GET', `inc/modelos/modelo-contactos.php?id=${id}&accion=borrar`, true);
+            xhr.open('GET', `inc/modelos/modelo-contactos-borrar.php?id=${id}&accion=borrar`, true);
             //leer la respuesta
             xhr.onload = function(){
                 if (this.status === 200) {
